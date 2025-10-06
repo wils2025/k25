@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pila en HTML</title>
+</head>
+<body>
+    <h1>Demostración de una Pila (LIFO)</h1>
+
+    <button onclick="mostrarPila()">Mostrar Pila</button>
+    <div id="resultado"></div>
+
+    <script>
+        // Creamos la pila usando un arreglo
+        let pila = [];
+
+        // Apilamos los números
+        pila.push(8);
+        pila.push(9);
+        pila.push(12);
+
+        // Función para mostrar la pila en LIFO
+        function mostrarPila() {
+            let resultado = "";
+            while (pila.length > 0) {
+                // pop() saca el último elemento agregado (LIFO)
+                resultado += pila.pop() + "<br>";
+            }
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>
